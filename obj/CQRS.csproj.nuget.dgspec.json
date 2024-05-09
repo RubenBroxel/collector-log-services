@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/citi.ruben.magana/Documents/BROXEL-TEST/CQRS/CQRS.csproj": {}
+  },
+  "projects": {
+    "/Users/citi.ruben.magana/Documents/BROXEL-TEST/CQRS/CQRS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/citi.ruben.magana/Documents/BROXEL-TEST/CQRS/CQRS.csproj",
+        "projectName": "CQRS",
+        "projectPath": "/Users/citi.ruben.magana/Documents/BROXEL-TEST/CQRS/CQRS.csproj",
+        "packagesPath": "/Users/citi.ruben.magana/.nuget/packages/",
+        "outputPath": "/Users/citi.ruben.magana/Documents/BROXEL-TEST/CQRS/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/citi.ruben.magana/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Cloud.Logging.Log4Net": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Google.Cloud.Logging.V2": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[14.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
