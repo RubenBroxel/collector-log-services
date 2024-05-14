@@ -1,1 +1,5 @@
-broxel-logs-dev-4942e4cdb460.json
+temps/
+bin/
+obj/
+appsettings.json
+.DS_Store
