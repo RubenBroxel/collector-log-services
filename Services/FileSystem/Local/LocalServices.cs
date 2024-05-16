@@ -3,11 +3,12 @@
 public class LocalServices: IFileServices
 {
     //Método para creación de ruta local temporal
-    public string CreateTempfilePath()
+    public string CreateTempfilePath(string fileName, string[] paths)
     {
-        var fileName = $"{Guid.NewGuid()}.log";
-        var directoryPath = Path.Combine("temps", "Mobiles");
-        if (!Directory.Exists(directoryPath)) Directory.CreateDirectory(directoryPath);
+        var directoryPath = Path.Combine(paths);
+        
+        if ( !Directory.Exists(directoryPath) ) Directory.CreateDirectory(directoryPath);
+        
         return Path.Combine(directoryPath, fileName);
     }
 }

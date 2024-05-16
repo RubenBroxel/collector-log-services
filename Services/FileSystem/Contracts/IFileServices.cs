@@ -1,4 +1,4 @@
 public interface IFileServices
 {
-    string CreateTempfilePath();
+    string CreateTempfilePath(string fileName,string[] paths);
 }
