@@ -64,11 +64,12 @@ app.MapGet("/users", () =>
 //Método: Endpoint con la responsabilidad de subir archivos que vengan de Apps de Broxel para mandarlos a GCP
 app.MapPost("api/logservice", async ( Stream logFile, IFileServices _fileServices, IGcpServices _gcpServices) =>
 {
-    LogFile tempFile  = new LogFile();
+    LogFile    tempFile   = new LogFile();
+    GcpLogFile gcpLogFile = new GcpLogFile(); 
+
     tempFile.FileName = $"{Guid.NewGuid()}.log";
     tempFile.filePath = [principal, user]; 
 
-    var gcpLogFile = new GcpLogFile(); 
     string tempfile = _fileServices.CreateTempfilePath(tempFile.FileName,tempFile.filePath);
     using var stream = File.OpenWrite(tempfile);
     await logFile.CopyToAsync(stream);
@@ -78,7 +79,7 @@ app.MapPost("api/logservice", async ( Stream logFile, IFileServices _fileService
     gcpLogFile.FileLocalPath = principal+"/"+user;
     gcpLogFile.FileType      = type;
     gcpLogFile.FileName      =tempFile.FileName;
-    stream.Name.ToString();
+    //stream.Name.ToString();
     stream.Close();
     await _gcpServices.SendToGcpBucketAsync(gcpLogFile);
 });
